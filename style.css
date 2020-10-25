@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.pokemonSpecies {
+  border: 2px solid gold;
+  border-radius: 10px;
+  box-shadow: 14px 18px 20px 0px #e5e5e5;
+  text-transform: capitalize;
+}
+
+.root img {
+  width: 100%;
+}
