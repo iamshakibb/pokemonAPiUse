@@ -4,7 +4,6 @@ function fetchPokemon() {
       .then((res) => res.json())
       .then((data) => {
         pokemonDiv(data, i);
-        console.log(data);
       });
   }
 }
