@@ -1,9 +1,10 @@
 function fetchPokemon() {
-  for (let i = 0; i < 24; i++) {
-    fetch(`https://pokeapi.co/api/v2/pokemon/${i + 1}`)
+  for (let i = 1; i < 24; i++) {
+    fetch(`https://pokeapi.co/api/v2/pokemon/${i}`)
       .then((res) => res.json())
       .then((data) => {
         pokemonDiv(data, i);
+        console.log(typeof data.abilities);
       });
   }
 }
@@ -16,8 +17,8 @@ function pokemonDiv(data, i) {
 
   div.innerHTML = `
       <div class="pokemonSpecies p-4 my-5 text-center">
-        <img src="https://pokeres.bastionbot.org/images/pokemon/${i + 1}.png">
-        <h6 class="my-4">${data.species.name}</h6>
+        <img src="https://pokeres.bastionbot.org/images/pokemon/${i}.png">
+        <h6 class="my-4">${data.name}</h6>
         <p>Ability : ${data.abilities[0].ability.name}</p>
         <p>Weight : ${data.weight}</p>
       </div>
